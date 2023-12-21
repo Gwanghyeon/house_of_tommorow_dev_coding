@@ -101,6 +101,7 @@ class _ButtonState extends ConsumerState<Button> {
       onTapCancel: () => onPressed(false),
 
       /// Container
+      /// 컨테이너 속성 변경시 자동으로 애니메이션 적용
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),
         width: widget.width,
