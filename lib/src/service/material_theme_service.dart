@@ -11,21 +11,24 @@ class MaterialThemeService extends Notifier<ThemeData> {
     final currentTheme = ref.watch(themeServiceProvider);
 
     return ThemeData(
-      /// Scaffold
-      scaffoldBackgroundColor: currentTheme.color.surface,
 
-      /// AppBar
-      appBarTheme: AppBarTheme(
-        backgroundColor: currentTheme.color.surface,
-        elevation: 0,
-        centerTitle: false,
-        iconTheme: IconThemeData(
-          color: currentTheme.color.text,
+        /// Scaffold
+        scaffoldBackgroundColor: currentTheme.color.surface,
+
+        /// AppBar
+        appBarTheme: AppBarTheme(
+          backgroundColor: currentTheme.color.surface,
+          elevation: 0,
+          centerTitle: false,
+          iconTheme: IconThemeData(
+            color: currentTheme.color.text,
+          ),
+          titleTextStyle: currentTheme.typo.headline2.copyWith(
+            color: currentTheme.color.text,
+          ),
         ),
-        titleTextStyle: currentTheme.typo.headline2.copyWith(
-          color: currentTheme.color.text,
-        ),
-      ),
-    );
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: Colors.transparent,
+        ));
   }
 }

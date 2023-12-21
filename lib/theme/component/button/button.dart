@@ -55,6 +55,7 @@ class _ButtonState extends ConsumerState<Button> {
   bool isPressed = false;
 
   /// 비활성화 여부
+  /// 버튼 내부의 비활성화 체크 변수: 터치 되었을 때 비활성화
   bool get isInactive => isPressed || widget.isInactive;
 
   /// Text & Icon Color

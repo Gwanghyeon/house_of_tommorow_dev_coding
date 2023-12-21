@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/theme_service_revised.dart';
-import 'package:house_of_tomorrow/theme/component/bottom_sheet/base_bottom_sheet.dart';
+import 'package:house_of_tomorrow/theme/component/bottom_sheet/setting_bottom_sheet.dart';
 import 'package:house_of_tomorrow/theme/component/button/button.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
 
@@ -21,11 +21,12 @@ class ShoppingView extends ConsumerWidget {
             type: ButtonType.flat,
             onPressed: () {
               showModalBottomSheet(
-                context: context,
-                builder: (context) => const BaseBottomSheet(
-                  child: Text('hello bottom sheet'),
-                ),
-              );
+                  context: context,
+
+                  /// BottomShee 크기를 최대화 가능
+                  /// 스크롤하여 닫을 수 있도록 하기에 크기가 화면을 가득 채움
+                  // isScrollControlled: true,
+                  builder: (context) => const SettingBottomSheet());
             },
           )
         ],
