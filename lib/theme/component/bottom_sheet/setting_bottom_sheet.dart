@@ -13,7 +13,6 @@ class SettingBottomSheet extends ConsumerWidget {
   @override
   Widget build(context, ref) {
     final currentTheme = ref.watch(themeServiceProvider);
-    final currentLang = ref.watch(langServiceProvider);
     final isLightTheme = currentTheme.brightness == Brightness.light;
 
     return BaseBottomSheet(
