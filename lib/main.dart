@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/lang_service.dart';
+import 'package:house_of_tomorrow/util/route_path.dart';
 
 import 'src/service/material_theme_service.dart';
-import 'src/view/shopping/shopping_view.dart';
 import 'util/lang/generated/l10n.dart';
 
 void main() {
@@ -27,7 +27,8 @@ class MyApp extends ConsumerWidget {
       locale: ref.watch(langServiceProvider),
       debugShowCheckedModeBanner: false,
       theme: ref.watch(materialThemeServiceProvider),
-      home: const ShoppingView(),
+      initialRoute: RoutePath.shopping,
+      onGenerateRoute: RoutePath.onGenerateRoute,
     );
   }
 }
