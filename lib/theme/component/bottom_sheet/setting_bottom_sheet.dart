@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/service/lang_service.dart';
 import 'package:house_of_tomorrow/src/service/theme_service_revised.dart';
-import 'package:house_of_tomorrow/theme/component/bottom_sheet/base_bottom_sheet.dart';
+import 'package:house_of_tomorrow/theme/component/bottom_sheet/bottom_sheet_layout.dart';
 import 'package:house_of_tomorrow/theme/component/tile.dart';
 import 'package:house_of_tomorrow/util/helper/intl_helper.dart';
 import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
@@ -13,10 +13,9 @@ class SettingBottomSheet extends ConsumerWidget {
   @override
   Widget build(context, ref) {
     final currentTheme = ref.watch(themeServiceProvider);
-    final currentLang = ref.watch(langServiceProvider);
     final isLightTheme = currentTheme.brightness == Brightness.light;
 
-    return BaseBottomSheet(
+    return BottomSheetLayout(
         child: Column(
       mainAxisSize: MainAxisSize.min, // 자식위젯의 크기에 맞춰 최소화
       children: [

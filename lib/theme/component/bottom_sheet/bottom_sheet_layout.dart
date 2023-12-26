@@ -7,8 +7,8 @@ import 'package:house_of_tomorrow/src/service/theme_service_revised.dart';
 /// hot-reload 사용 원할 시 별도의 위젯으로 분리 : SettingBottomSheet->BaseBottomSheet
 /// SettingBottomSheet class의 build 함수에서 BaseBottomSheet Call
 /// Build 재호출 가능
-class BaseBottomSheet extends ConsumerWidget {
-  const BaseBottomSheet({
+class BottomSheetLayout extends ConsumerWidget {
+  const BottomSheetLayout({
     required this.child,
     this.padding,
     super.key,
