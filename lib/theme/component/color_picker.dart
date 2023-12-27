@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:house_of_tomorrow/src/service/theme_service_revised.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
 
 class ColorPicker extends ConsumerWidget {
   const ColorPicker({

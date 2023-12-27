@@ -3,15 +3,16 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:house_of_tomorrow/src/model/product.dart';
-import 'package:house_of_tomorrow/src/view/shopping/widget/product_card_grid.dart';
-import 'package:house_of_tomorrow/src/view/shopping/widget/product_empty.dart';
-import 'package:house_of_tomorrow/theme/component/bottom_sheet/setting_bottom_sheet.dart';
-import 'package:house_of_tomorrow/theme/component/button/button.dart';
-import 'package:house_of_tomorrow/theme/component/hide_keyboard.dart';
-import 'package:house_of_tomorrow/theme/component/input_field.dart';
-import 'package:house_of_tomorrow/util/helper/network_helper.dart';
-import 'package:house_of_tomorrow/util/lang/generated/l10n.dart';
+
+import '../../../theme/component/bottom_sheet/setting_bottom_sheet.dart';
+import '../../../theme/component/button/button.dart';
+import '../../../theme/component/hide_keyboard.dart';
+import '../../../theme/component/input_field.dart';
+import '../../../util/helper/network_helper.dart';
+import '../../../util/lang/generated/l10n.dart';
+import '../../model/product.dart';
+import 'widget/product_card_grid.dart';
+import 'widget/product_empty.dart';
 
 class ShoppingView extends ConsumerStatefulWidget {
   const ShoppingView({super.key});

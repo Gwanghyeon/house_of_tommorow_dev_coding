@@ -4,6 +4,7 @@ import 'package:house_of_tomorrow/src/view/product/product_view.dart';
 import 'package:house_of_tomorrow/src/view/shopping/shopping_view.dart';
 
 abstract class RoutePath {
+  // 페이지 이름 관리
   static const String shopping = 'shopping';
   static const String product = 'product';
 

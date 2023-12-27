@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:house_of_tomorrow/src/service/theme_service_revised.dart';
+import 'package:house_of_tomorrow/src/service/theme_service.dart';
 
 /// 화면 위에 뛰우는 위젯의 경우 주의 사항
 /// 자식이 아닌 형제관계로 주입되기에 Provider Scope 주의
@@ -29,10 +29,11 @@ class BaseBottomSheet extends ConsumerWidget {
         ),
         boxShadow: currentTheme.deco.shadow,
       ),
-      padding: const EdgeInsets.only(
-        top: 32,
-        bottom: 16,
-      ),
+      padding: padding ??
+          const EdgeInsets.only(
+            top: 32,
+            bottom: 16,
+          ),
       // 글씨가 잘리는 것을 방지하기 위한 SafeArea
       // 화면 위나 밑에서 사용하는 위젯의 경우 사용 권장
       child: SafeArea(child: child),
