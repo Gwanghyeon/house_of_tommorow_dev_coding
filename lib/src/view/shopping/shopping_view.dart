@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:house_of_tomorrow/theme/component/cart_button.dart';
 
 import '../../../theme/component/bottom_sheet/setting_bottom_sheet.dart';
 import '../../../theme/component/button/button.dart';
@@ -83,7 +84,10 @@ class _ShoppingViewState extends ConsumerState<ShoppingView> {
                     // isScrollControlled: true,
                     builder: (context) => const SettingBottomSheet());
               },
-            )
+            ),
+
+            // 장바구니버튼
+            const CartButton(),
           ],
         ),
         body: Column(

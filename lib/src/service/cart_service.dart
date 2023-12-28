@@ -2,7 +2,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:house_of_tomorrow/src/model/cart_item.dart';
 
-final cartService = NotifierProvider<CartService, CartState>(CartService.new);
+final cartServiceProvider =
+    NotifierProvider<CartService, CartState>(CartService.new);
 
 class CartState {
   final List<CartItem> cartItemList;
@@ -52,6 +53,6 @@ class CartService extends Notifier<CartState> {
     state = state.copyWith(cartItemList: res);
   }
 
-  List<CartItem> getSelectedItemList() =>
+  List<CartItem> get selectedCartItemList =>
       state.cartItemList.where((element) => element.isSelected).toList();
 }
